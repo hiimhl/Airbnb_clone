@@ -1,6 +1,189 @@
 @use "common" as c;
 
-.header {
-  // color: c.$color-pink;
-  background-color: c.$color-black-transparent;
+// mixin
+@mixin button {
+  border: c.$border;
+  border-radius: c.$border-radius-box;
+
+  &:hover {
+    box-shadow: c.$shadow-hover;
+  }
+}
+
+#header {
+  height: auto;
+  border-bottom: c.$border;
+  position: sticky;
+  background-color: c.$color-white;
+  top: 0;
+}
+
+// Navbar
+.navbar {
+  @include c.wrapper;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: c.$border;
+  height: 8vh;
+
+  .nav_logo {
+    @include c.flex-center;
+    color: c.$color-pink;
+    font-size: 22px;
+    font-weight: bold;
+
+    span {
+      margin-left: c.$space-small;
+    }
+    i {
+      font-size: 38px;
+    }
+  }
+
+  // Date filter buttons
+  .nav_date {
+    @include button();
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    padding: c.$space-middle c.$space-large;
+    box-shadow: c.$shadow-small;
+
+    .nav_date_box {
+      display: flex;
+      .nav_date_box_list {
+        font-size: 15px;
+        font-weight: bold;
+        border-right: c.$border;
+        padding: 0 18px;
+      }
+      .nav_date_box_list:first-child {
+        padding: 0;
+        padding-right: 18px;
+      }
+      .nav_date_box_list:last-child {
+        border: none;
+        font-weight: 400;
+        margin-right: c.$space-large;
+        color: c.$color-gray;
+      }
+    }
+
+    // galss icon
+    .nav_date_btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: c.$space-small;
+      color: c.$color-white;
+      background-color: c.$color-pink;
+      border-radius: c.$border-radius-circle;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  // Menu buttons
+  .nav_menu {
+    display: flex;
+
+    .nav_menu_space,
+    .nav_menu_translate {
+      font-size: c.$font-middle;
+      padding: 0 c.$space-default;
+      &:hover {
+        background-color: c.$color-light-gray;
+        border-radius: c.$border-radius-box;
+      }
+    }
+    .nav_menu_user-box {
+      @include button();
+      @include c.flex-center;
+      cursor: pointer;
+      color: c.$color-dark-gray;
+      padding: c.$space-micro c.$space-middle;
+      margin-left: c.$space-middle;
+      gap: c.$space-default;
+      .bar {
+        margin-left: c.$space-micro;
+      }
+      .user {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+// Category filter
+.category {
+  @include c.wrapper;
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+
+  //ul
+  .category_list {
+    display: flex;
+    justify-content: space-around;
+    // gap: c.$space-xlarge;
+    width: 90%;
+
+    // item
+    .category_item {
+      @include c.flex-center;
+      cursor: pointer;
+      height: 100%;
+      width: 100px;
+      flex-direction: column;
+      font-size: 14px;
+      color: c.$color-dark-gray;
+      border-bottom: 4px solid transparent;
+
+      &:hover {
+        border-bottom: 4px solid c.$color-light-gray;
+        color: c.$color-black;
+      }
+
+      .category_item_img {
+        width: 25px;
+      }
+    }
+
+    .selected {
+      border-bottom: 4px solid c.$color-black;
+      &:hover {
+        border-bottom: 4px solid c.$color-black;
+      }
+    }
+  }
+
+  .category_filter {
+    display: flex;
+    align-items: center;
+
+    .category_right_btn {
+      @include button();
+      border: 2px solid c.$color-gray;
+      border-radius: c.$border-radius-circle;
+      width: 30px;
+      height: 30px;
+      box-shadow: none;
+      margin-right: c.$space-large;
+      &:hover {
+        box-shadow: c.$shadow-button;
+      }
+    }
+
+    .category_filter_btn {
+      border: c.$border;
+      border-radius: 12px;
+      padding: c.$space-default;
+      i {
+        margin-right: c.$space-middle;
+      }
+    }
+  }
 }
