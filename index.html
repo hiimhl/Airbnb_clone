@@ -11,6 +11,7 @@
       src="https://kit.fontawesome.com/31f273f6bf.js"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js" defer></script>
     <title>airbnb</title>
   </head>
   <body>
@@ -138,128 +139,31 @@
     </header>
     <!-- main -->
     <main id="main">
-      <button class="map">
-        지도에 표시하기 <i class="fa-solid fa-map"></i>
-      </button>
+      <button class="map">지도 표시하기 <i class="fa-solid fa-map"></i></button>
       <ul class="card-container">
         <!-- item card -->
         <li class="card">
           <button class="card_heart">
             <i class="fa-regular fa-heart"></i>
           </button>
-          <div class="card_img"><!--image--></div>
-          <h3 class="card_title"></h3>
-          <span class="card_km">125Km 거리</span>
-          <span class="card_date">8월 3일~10일</span>
-          <div class="card_amont">181,714/ 박</div>
-          <div class="card_dot">
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
+          <div class="card_img">
+            <img src="https://picsum.photos/id/0/5000/3333" alt="card_image" />
+            <div class="card_dots">
+              <span class="card_dot_circle circle_select"></span>
+              <span class="card_dot_circle"></span>
+              <span class="card_dot_circle"></span>
+              <span class="card_dot_circle"></span>
+              <span class="card_dot_circle"></span>
+            </div>
           </div>
-        </li>
-        <li class="card">
-          <button class="card_heart">
-            <i class="fa-regular fa-heart"></i>
-          </button>
-          <div class="card_img"><!--image--></div>
-          <h3 class="card_title">경주, 한국</h3>
-          <span class="card_km">125Km 거리</span>
-          <span class="card_date">8월 3일~10일</span>
-          <div class="card_amont">181,714/ 박</div>
-          <div class="card_dot">
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-          </div>
-        </li>
-        <li class="card">
-          <button class="card_heart">
-            <i class="fa-regular fa-heart"></i>
-          </button>
-          <div class="card_img"><!--image--></div>
-          <h3 class="card_title">경주, 한국</h3>
-          <span class="card_km">125Km 거리</span>
-          <span class="card_date">8월 3일~10일</span>
-          <div class="card_amont">181,714/ 박</div>
-          <div class="card_dot">
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-          </div>
-        </li>
-        <li class="card">
-          <button class="card_heart">
-            <i class="fa-regular fa-heart"></i>
-          </button>
-          <div class="card_img"><!--image--></div>
-          <h3 class="card_title">경주, 한국</h3>
-          <span class="card_km">125Km 거리</span>
-          <span class="card_date">8월 3일~10일</span>
-          <div class="card_amont">181,714/ 박</div>
-          <div class="card_dot">
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-          </div>
-        </li>
-        <li class="card">
-          <button class="card_heart">
-            <i class="fa-regular fa-heart"></i>
-          </button>
-          <div class="card_img"><!--image--></div>
-          <h3 class="card_title">경주, 한국</h3>
-          <span class="card_km">125Km 거리</span>
-          <span class="card_date">8월 3일~10일</span>
-          <div class="card_amont">181,714/ 박</div>
-          <div class="card_dot">
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-          </div>
-        </li>
-        <li class="card">
-          <button class="card_heart">
-            <i class="fa-regular fa-heart"></i>
-          </button>
-          <div class="card_img"><!--image--></div>
-          <h3 class="card_title">경주, 한국</h3>
-          <span class="card_km">125Km 거리</span>
-          <span class="card_date">8월 3일~10일</span>
-          <div class="card_amont">181,714/ 박</div>
-          <div class="card_dot">
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-          </div>
-        </li>
-        <li class="card">
-          <button class="card_heart">
-            <i class="fa-regular fa-heart"></i>
-          </button>
-          <div class="card_img"><!--image--></div>
-          <h3 class="card_title">경주, 한국</h3>
-          <span class="card_km">125Km 거리</span>
-          <span class="card_date">8월 3일~10일</span>
-          <div class="card_amont">181,714/ 박</div>
-          <div class="card_dot">
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
-            <div class="card_dot_circle"></div>
+          <div class="card_content">
+            <h3 class="card_title">경주 한국</h3>
+            <div class="card_star"><i class="fa-solid fa-star"></i> 4.5</div>
+            <p class="card_desc">
+              125Km 거리<br />
+              8월 3일~10일<br />
+            </p>
+            <p class="card_amount"><strong>₩181,714</strong>/ 박</p>
           </div>
         </li>
       </ul>
