@@ -53,11 +53,12 @@ ol {
   position: sticky;
   background-color: #ffffff;
   top: 0;
+  z-index: 1000;
 }
 
 .navbar {
   width: 100%;
-  padding: 0 5%;
+  padding: 0 4%;
   height: auto;
   display: flex;
   align-items: center;
@@ -160,7 +161,7 @@ ol {
 
 .category {
   width: 100%;
-  padding: 0 5%;
+  padding: 0 4%;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -227,24 +228,24 @@ ol {
 
 #main {
   width: 100%;
-  padding: 0 5%;
+  padding: 0 4%;
   height: auto;
 }
 #main .map {
   position: fixed;
-  bottom: 11vh;
+  bottom: 13vh;
   left: 50%;
   transform: translateX(-50%);
   background-color: #1e1e1e;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 #main .map:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  transform: scale(1.05) translateX(-50%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 #main .map i {
   margin-left: 5px;
@@ -317,6 +318,39 @@ ol {
 }
 .card-container .card .card_content .card_amount strong {
   color: #000000;
+}
+
+#footer {
+  width: 100%;
+  padding: 0 4%;
+  height: auto;
+  color: #717171;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #dddddd;
+}
+#footer .info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dddddd;
+  padding: 10px 0;
+}
+#footer .info .info_list {
+  display: flex;
+}
+#footer .info .info_list .info_item {
+  margin-right: 10px;
+}
+#footer .info .footer_btns > .footer_btn {
+  margin-left: 10px;
+  font-size: 14px;
+}
+#footer .info .footer_btns > .footer_btn:hover {
+  text-decoration: underline;
+}
+#footer .info_description {
+  font-size: 10px;
+  margin: 7px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

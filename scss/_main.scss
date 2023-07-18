@@ -5,19 +5,19 @@
 
   .map {
     position: fixed;
-    bottom: 11vh;
+    bottom: 13vh;
     left: 50%;
     transform: translateX(-50%);
     background-color: c.$color-black-gary;
     color: c.$color-white;
-    font-size: c.$font-middle;
+    font-size: 14px;
     border-radius: c.$border-radius-box;
-    padding: c.$space-middle c.$space-large;
+    padding: c.$space-default c.$space-large;
     transition: box-shadow c.$transition, transform c.$transition;
 
     &:hover {
-      transform: scale(1.05);
-      box-shadow: c.$shadow-big;
+      transform: scale(1.05) translateX(-50%);
+      box-shadow: c.$shadow-button;
     }
     i {
       margin-left: c.$space-micro;

@@ -1,0 +1,35 @@
+@use "common" as c;
+
+#footer {
+  @include c.wrapper;
+
+  color: c.$color-dark-gray;
+  position: fixed;
+  bottom: 0;
+  border-top: c.$border;
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: c.$border;
+    padding: c.$space-middle 0;
+    .info_list {
+      display: flex;
+      .info_item {
+        margin-right: c.$space-middle;
+      }
+    }
+    .footer_btns > .footer_btn {
+      margin-left: c.$space-middle;
+      font-size: 14px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .info_description {
+    font-size: c.$font-small;
+    margin: c.$space-small 0;
+  }
+}
