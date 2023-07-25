@@ -3,6 +3,7 @@
 #footer {
   @include c.wrapper;
 
+  background-color: c.$color-white;
   color: c.$color-dark-gray;
   position: fixed;
   bottom: 0;
