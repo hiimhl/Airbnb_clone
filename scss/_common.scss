@@ -16,20 +16,20 @@ $shadow-button: 0 4px 20px rgba(0, 0, 0, 0.1);
 $shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.18);
 $shadow-small: 0 2px 8px rgba(0, 0, 0, 0.08);
 
-// space
-$space-micro: 5px;
-$space-small: 7px;
-$space-middle: 10px;
-$space-default: 15px;
-$space-large: 20px;
-$space-xlarge: 30px;
+// Space
+$space-micro: 0.35em;
+$space-small: 0.5em;
+$space-middle: 0.7em;
+$space-default: 1em;
+$space-large: 1.4em;
+$space-xlarge: 2em;
 
 // font size
-$font-micro: 5px;
-$font-small: 10px;
-$font-middle: 16px;
-$font-large: 20px;
-$font-xlarge: 28px;
+$font-micro: 0.35em;
+$font-small: 0.7em;
+$font-middle: 1em;
+$font-large: 1.4em;
+$font-xlarge: 2em;
 
 //border
 $border: 1px solid #dddddd;
@@ -40,6 +40,12 @@ $border-radius-circle: 50%;
 
 // transition
 $transition: 0.3s ease;
+
+// Screen Size
+$desktop: 1280px;
+$tablet: 1024px;
+$tablet-s: 768px;
+$mobile: 415px;
 
 // mixin
 @mixin wrapper {

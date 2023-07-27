@@ -28,6 +28,7 @@
   position: relative;
   border-bottom: c.$border;
   height: 8vh;
+  min-height: 80px;
 
   .nav_logo {
     @include c.flex-center;
@@ -85,6 +86,9 @@
       width: 32px;
       height: 32px;
     }
+    .nav_filter_btn {
+      display: none;
+    }
   }
 
   // Menu buttons
@@ -124,12 +128,12 @@
   display: flex;
   justify-content: space-between;
   height: 8vh;
+  min-height: 80px;
 
   //ul
   .category_list {
     display: flex;
     justify-content: space-around;
-    // gap: c.$space-xlarge;
     width: 90%;
 
     // item
@@ -190,5 +194,57 @@
 }
 
 .scroll {
-  height: 6vh;
+  min-height: 65px;
+  height: 65px;
+}
+
+// Mobile
+@media screen and (max-width: c.$desktop) {
+  #header {
+    font-size: 14px;
+    .category_list {
+      width: 85%;
+    }
+  }
+}
+@media screen and (max-width: c.$tablet) {
+  .navbar {
+    max-height: 70px;
+    .nav_logo span {
+      display: none;
+    }
+    .nav_menu_space {
+      display: none;
+    }
+  }
+  .category {
+    min-height: 70px;
+  }
+}
+
+@media screen and (max-width: c.$tablet-s) {
+  .category {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 0;
+    width: 100%;
+    justify-content: initial;
+
+    .category_list {
+      overflow: hidden;
+      flex-wrap: wrap;
+      width: 100%;
+      .category_item {
+        width: 90px;
+        padding: 0 c.$space-small;
+        .category_item_img {
+          width: 25px;
+        }
+      }
+    }
+    .category_filter {
+      width: 100%;
+      margin: 0;
+    }
+  }
 }

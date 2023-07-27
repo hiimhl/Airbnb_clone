@@ -102,3 +102,48 @@
     }
   }
 }
+
+@media screen and (max-width: c.$desktop) {
+  #main {
+    font-size: 14px;
+    .card-container {
+      grid-template-columns: repeat(5, 1fr);
+      .card {
+        max-height: 320px;
+        .card_img {
+          max-height: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: c.$tablet) {
+  #main {
+    font-size: 12px;
+    .map {
+      display: none;
+    }
+    .card-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+@media screen and (max-width: c.$tablet-s) {
+  #main {
+    font-size: 14px;
+    .map {
+      display: none;
+    }
+    .card-container {
+      grid-template-columns: repeat(2, 1fr);
+      .card {
+        max-height: none;
+        .card_img {
+          max-height: 250px;
+          max-height: none;
+        }
+      }
+    }
+  }
+}
