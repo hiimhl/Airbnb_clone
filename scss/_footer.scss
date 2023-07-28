@@ -58,3 +58,36 @@
     }
   }
 }
+
+@media screen and (max-width: c.$mobile) {
+  #footer .info,
+  #footer .info_description {
+    display: none;
+  }
+
+  #footer {
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+
+    .mobile-menu {
+      display: flex;
+      gap: c.$space-large;
+      .mobile_btns {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        color: c.$color-dark-gray;
+        i {
+          font-size: 24px;
+          margin-bottom: c.$space-micro;
+        }
+        span {
+          font-size: c.$font-small;
+        }
+      }
+    }
+  }
+}

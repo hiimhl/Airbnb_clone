@@ -66,7 +66,7 @@
         padding: 0;
         padding-right: 18px;
       }
-      .nav_date_box_list:last-child {
+      .nav_date_box_list:nth-child(3) {
         border: none;
         font-weight: 400;
         margin-right: c.$space-large;
@@ -87,6 +87,10 @@
       height: 32px;
     }
     .nav_filter_btn {
+      display: none;
+    }
+
+    .nav_list_mobile {
       display: none;
     }
   }
@@ -133,7 +137,7 @@
   //ul
   .category_list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 90%;
 
     // item
@@ -186,6 +190,7 @@
       border: c.$border;
       border-radius: 12px;
       padding: c.$space-default;
+      min-width: 80px;
       i {
         margin-right: c.$space-middle;
       }
@@ -245,6 +250,88 @@
     .category_filter {
       width: 100%;
       margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: c.$mobile) {
+  #header .navbar {
+    padding-top: c.$space-small;
+    border: none;
+    .nav_logo {
+      display: none;
+      position: relative;
+      width: 85%;
+    }
+    .nav_date {
+      width: 100%;
+      position: initial;
+      transform: none;
+      flex-direction: row-reverse;
+      justify-content: start;
+      align-items: center;
+
+      // galss icon
+      .nav_date_btn {
+        position: initial;
+        transform: translate(-4px, 2px);
+        font-size: 16px;
+        background-color: transparent;
+        color: c.$color-black;
+      }
+      .nav_date_box {
+        flex-direction: column;
+        align-items: baseline;
+
+        .nav_date_box_list {
+          display: none;
+        }
+        .nav_date_box_list:first-child {
+          display: inline-block;
+          border: none;
+          margin: 0;
+        }
+
+        .nav_list_mobile {
+          display: initial;
+          color: c.$color-dark-gray;
+          padding: 0;
+        }
+      }
+
+      // filter button
+      .nav_filter_btn {
+        @include button();
+
+        display: initial;
+        position: absolute;
+        right: 8%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+    .nav_menu {
+      display: none;
+    }
+  }
+
+  // category
+  .category {
+    display: flex;
+    justify-content: space-evenly;
+    .category_list {
+      // justify-content: space-evenly;
+      width: 100%;
+
+      .category_item {
+        padding: 0;
+        font-size: 12px;
+        width: 65px;
+      }
+    }
+    .category_filter {
+      display: none;
     }
   }
 }

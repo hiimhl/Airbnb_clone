@@ -140,10 +140,15 @@
       .card {
         max-height: none;
         .card_img {
-          max-height: 250px;
           max-height: none;
         }
       }
     }
+  }
+}
+@media screen and (max-width: c.$mobile) {
+  #main .card-container {
+    display: flex;
+    flex-direction: column;
   }
 }
